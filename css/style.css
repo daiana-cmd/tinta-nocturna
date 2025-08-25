@@ -1,0 +1,195 @@
+/*  Estilo general */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+  scroll-behavior: smooth;
+  background-color: #000;
+}
+
+/*  Barra de navegación */
+.barra_nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(17, 17, 17, 0.95);
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+.btn_nav {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  background: transparent;
+  padding: 8px 12px;
+  border: 1px solid white;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.btn_nav:hover {
+  background-color: #444;
+}
+
+/*  Menú desplegable de géneros */
+.menu_genero {
+  position: relative;
+}
+
+.boton_genero {
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  border: 1px solid white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 38px;
+  background-color: #222;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+  border-radius: 4px;
+  min-width: 160px;
+  z-index: 1001;
+}
+
+.dropdown a {
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s ease;
+}
+
+.dropdown a:hover {
+  background-color: #444;
+}
+
+.menu_genero:hover .dropdown {
+  display: block;
+}
+
+/*  Estructura general de secciones */
+.genero {
+  min-height: 100vh;
+  padding: 120px 30px 100px;
+  box-sizing: border-box;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.genero + .genero {
+  margin-top: 0;
+}
+
+/*  Fondo para la sección INICIO */
+#inicio {
+  background-image: url("../imagenes/fondo1.jpeg");
+}
+
+/*  Fondos individuales por género */
+#terror {
+  background-image: url("../imagenes/fondoterror.jpeg");
+}
+
+#romance {
+  background-image: url("../imagenes/fondoromance.jpeg");
+}
+
+#comico {
+  background-image: url("../imagenes/fondocomico.jpeg");
+}
+
+#misterio {
+  background-image: url("../imagenes/fondomisterio.jpeg");
+}
+
+#suspenso {
+  background-image: url("../imagenes/fondosuspenso.jpeg");
+}
+
+/*  Contenido centrado con fondo oscuro translúcido */
+.contenido {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 700px;
+  margin: 0 auto;
+  backdrop-filter: blur(3px);
+}
+/* ---------------------------------------------------------------------------------------------------*/
+.suscripcion {
+  background-color: #151515;
+  color: #f3f3f3;
+  padding: 40px;
+  text-align: center;
+  border-top: 2px solid #5c3d5e;
+  font-family: 'Georgia', serif;
+  margin-top: 60px;
+}
+
+.suscripcion h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #dab6fc;
+}
+
+.suscripcion p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.suscripcion input[type="email"] {
+  padding: 12px;
+  width: 250px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: #2b2b2b;
+  color: #f5f5f5;
+}
+
+.suscripcion button {
+  padding: 12px 25px;
+  background-color: #5c3d5e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.suscripcion button:hover {
+  background-color: #442c45;
+}
+
+.confirmacion {
+  background-color: #292929;
+  color: #dab6fc;
+  border: 1px solid #555;
+  padding: 10px;
+  margin: 10px auto;
+  width: fit-content;
+  font-style: italic;
+  font-family: 'Georgia', serif;
+  border-radius: 4px;
+}
